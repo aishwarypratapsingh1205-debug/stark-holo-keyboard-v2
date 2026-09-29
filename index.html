@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STARK HOLO KEYBOARD</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>STARK HOLO KEYBOARD</h1>
+
+    <div class="status" id="status">
+      SYSTEM READY
+    </div>
+
+    <div class="camera-box">
+      <video id="video" autoplay playsinline muted></video>
+      <canvas id="overlay"></canvas>
+
+      <div class="camera-message" id="cameraMessage">
+        CAMERA OFF
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="start">START CAMERA</button>
+      <button id="stop">STOP CAMERA</button>
+      <button id="clear">CLEAR</button>
+    </div>
+
+    <div class="gesture">
+      Gesture: <span id="gesture">Waiting...</span>
+    </div>
+
+    <textarea
+      id="output"
+      placeholder="Your typed text will appear here..."
+      spellcheck="false">
+    </textarea>
+
+    <div id="keyboard" class="keyboard"></div>
+
+  </div>
+
+  <script type="module" src="script.js"></script>
+
+</body>
+</html>
