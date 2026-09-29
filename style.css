@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #02070b;
+  color: #00eaff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.container {
+  width: 95%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px 10px;
+}
+
+h1 {
+  font-size: 28px;
+  letter-spacing: 4px;
+  text-shadow: 0 0 15px #00eaff;
+}
+
+.status,
+.gesture {
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #00eaff;
+  border-radius: 8px;
+  background: rgba(0, 234, 255, 0.05);
+}
+
+.camera-box {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 15px auto;
+  border: 2px solid #00eaff;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 0 25px rgba(0, 234, 255, 0.3);
+}
+
+#video {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: scaleX(-1);
+}
+
+#overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transform: scaleX(-1);
+}
+
+.camera-message {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00eaff;
+  font-size: 20px;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 15px 0;
+}
+
+button {
+  padding: 12px 18px;
+  border: 1px solid #00eaff;
+  border-radius: 8px;
+  background: #03151b;
+  color: #00eaff;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 234, 255, 0.25);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+#output {
+  width: 100%;
+  min-height: 90px;
+  margin: 15px 0;
+  padding: 12px;
+  resize: vertical;
+  background: #010508;
+  color: #00eaff;
+  border: 1px solid #00eaff;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.key-row {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+}
+
+.key {
+  min-width: 42px;
+  padding: 12px 7px;
+  border: 1px solid #00eaff;
+  border-radius: 6px;
+  background: rgba(0, 234, 255, 0.06);
+  color: #00eaff;
+  font-weight: bold;
+  box-shadow: 0 0 8px rgba(0, 234, 255, 0.2);
+  user-select: none;
+}
+
+.key:hover,
+.key.active {
+  background: rgba(0, 234, 255, 0.25);
+  box-shadow: 0 0 18px #00eaff;
+}
+
+.key.space {
+  width: 280px;
+}
+
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  .key-row {
+    gap: 3px;
+  }
+
+  .key {
+    min-width: 24px;
+    padding: 10px 3px;
+    font-size: 11px;
+  }
+
+  .key.space {
+    width: 180px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+  }
